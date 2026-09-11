@@ -39,7 +39,7 @@
 
 <header>
   <h1>Politique de confidentialité</h1>
-  <p class="meta">Application <span class="app">Code de la Route</span> — dernière mise à jour : 3 juillet 2026</p>
+  <p class="meta">Application <span class="app">Code de la Route</span> — dernière mise à jour : 10 septembre 2026</p>
 </header>
 
 <p>La présente politique décrit comment l'application <strong>Code de la Route</strong> (« l'Application »), éditée par <strong>Ismael Ouattara</strong> (« nous »), traite les informations lorsque vous utilisez l'Application. En installant et en utilisant l'Application, vous acceptez les pratiques décrites ci-dessous.</p>
@@ -48,9 +48,9 @@
 <div class="box">
 <ul>
   <li>L'Application est un outil éducatif de préparation au code de la route.</li>
-  <li><strong>La quasi-totalité de vos données reste sur votre téléphone</strong> (prénom, progression, résultats de quiz).</li>
-  <li>Nous <strong>ne créons pas de compte</strong> et ne collectons pas votre nom réel, votre adresse ou votre numéro de téléphone.</li>
-  <li>Des <strong>services tiers</strong> (publicité, paiement, assistant IA) peuvent traiter certaines données techniques, comme décrit ci-dessous.</li>
+  <li><strong>La quasi-totalité de vos données reste sur votre téléphone</strong> (prénom, progression, résultats de quiz, conversation avec l'assistant).</li>
+  <li>Nous <strong>ne vous demandons pas de créer de compte</strong> et ne collectons ni votre nom réel, ni votre adresse, ni votre numéro de téléphone. Un <strong>identifiant anonyme</strong> technique est créé uniquement si vous utilisez l'assistant IA ou si vous souscrivez l'abonnement Premium (voir §4).</li>
+  <li>Des <strong>services tiers</strong> (publicité, rapports de plantage, paiement, assistant IA) traitent certaines données techniques, comme décrit ci-dessous.</li>
 </ul>
 </div>
 
@@ -59,63 +59,101 @@
 <ul>
   <li>Le <strong>prénom</strong> que vous saisissez (facultatif) ;</li>
   <li>Le <strong>pays</strong> sélectionné ;</li>
-  <li>Votre <strong>progression</strong> : chapitres lus, panneaux maîtrisés, historique et scores de quiz ;</li>
-  <li>Vos <strong>préférences</strong> (thème clair/sombre) ;</li>
-  <li>L'<strong>historique de vos échanges</strong> avec l'assistant IA.</li>
+  <li>Votre <strong>progression</strong> : chapitres lus, panneaux maîtrisés, historique et scores de quiz, série de jours, badges ;</li>
+  <li>Vos <strong>préférences</strong> (thème clair/sombre, rappels de révision) ;</li>
+  <li>L'<strong>historique de vos échanges</strong> avec l'assistant IA (les 50 derniers messages), y compris la <strong>dernière photo</strong> que vous lui avez envoyée — les photos précédentes ne sont pas conservées. Le bouton <strong>« Effacer la conversation »</strong> de l'assistant supprime cet historique et cette photo ;</li>
+  <li>Le nombre de <strong>questions restantes</strong> pour l'assistant ;</li>
+  <li>La <strong>date d'échéance</strong> de votre abonnement Premium.</li>
 </ul>
+<p>Ces données <strong>ne sont pas copiées dans la sauvegarde Google Drive</strong> de votre téléphone : l'Application désactive la sauvegarde automatique d'Android. Votre abonnement se restaure depuis le store, pas depuis une copie de fichiers.</p>
 <p>Vous pouvez <strong>supprimer toutes ces données</strong> à tout moment en désinstallant l'Application ou en effaçant les données de l'Application dans les réglages de votre téléphone.</p>
 
 <h2>3. Publicité (Google AdMob)</h2>
 <p>L'Application affiche des publicités via <strong>Google AdMob</strong>. Pour cela, Google peut collecter et traiter certaines données, notamment un <strong>identifiant publicitaire</strong>, des informations sur l'appareil et des données d'usage, afin d'afficher des publicités (personnalisées ou non).</p>
 <ul>
+  <li>Là où la réglementation l'exige (notamment dans l'Espace économique européen), un formulaire recueille votre consentement, et <strong>aucune publicité n'est demandée avant que votre choix soit enregistré</strong>.</li>
+  <li>Sur iOS, l'Application vous demande l'autorisation de suivi (App Tracking Transparency) ; la refuser ne limite aucune fonction.</li>
+  <li>Les publicités sont limitées au classement « T » (adolescents) : aucun contenu publicitaire réservé aux adultes.</li>
   <li>Vous pouvez réinitialiser ou limiter le suivi publicitaire dans les réglages de votre téléphone (Android : « Confidentialité › Annonces » ; iOS : « Confidentialité › Suivi »).</li>
   <li>Politique de confidentialité de Google : <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
 </ul>
-<p>Les utilisateurs <strong>Premium</strong> (voir §5) ne voient pas de publicités.</p>
+<p>Les utilisateurs <strong>Premium</strong> (voir §6) ne voient pas de publicités.</p>
 
-<h2>4. Assistant IA (fonction optionnelle)</h2>
+<h2>4. Identifiant anonyme (Firebase Authentication)</h2>
+<ul>
+  <li>Un <strong>identifiant anonyme</strong> est attribué par Google Firebase <strong>seulement au premier usage de l'assistant IA ou à la vérification d'un achat</strong>. Il n'est pas créé à l'installation ni au lancement de l'Application.</li>
+  <li>C'est une suite de caractères aléatoire : elle ne contient ni votre nom, ni votre adresse e-mail, ni votre numéro de téléphone, et ne permet pas de vous identifier directement.</li>
+  <li>Il sert uniquement à appliquer la limite quotidienne de l'assistant (§5) et à rattacher la vérification de votre abonnement (§6).</li>
+  <li>Si vous effacez les données de l'Application ou la désinstallez, un nouvel identifiant sera créé au prochain usage ; l'ancien n'est plus relié à votre appareil.</li>
+</ul>
+
+<h2>5. Assistant IA (fonction optionnelle)</h2>
 <p>Si vous utilisez l'<strong>assistant IA</strong> (« Coach Route ») :</p>
 <ul>
-  <li>Le <strong>texte de vos questions</strong> — et, si vous choisissez d'envoyer une <strong>photo</strong> d'un panneau, cette image — sont transmis à nos serveurs (<strong>Google Firebase / Cloud Functions</strong>) puis au fournisseur du modèle d'IA, <strong>OpenAI</strong>, afin de générer une réponse.</li>
-  <li>Un <strong>identifiant anonyme</strong> (authentification anonyme Firebase) est attribué à votre appareil pour appliquer une limite d'utilisation quotidienne. Cet identifiant <strong>ne vous identifie pas personnellement</strong>.</li>
-  <li>Nous <strong>ne conservons pas</strong> vos messages sur nos serveurs ; l'historique de conversation reste <strong>sur votre téléphone</strong>. Les images envoyées ne sont <strong>pas stockées</strong> durablement.</li>
-  <li>Traitement par OpenAI : <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a></li>
-  <li>N'envoyez pas d'informations personnelles sensibles à l'assistant.</li>
+  <li>Le <strong>texte de votre question</strong>, les derniers messages de la conversation (pour le contexte) et, si vous choisissez d'en envoyer une, la <strong>photo</strong> d'un panneau sont transmis à nos serveurs (<strong>Google Firebase / Cloud Functions</strong>, région Europe de l'Ouest) puis au fournisseur du modèle d'IA, <strong>OpenAI</strong>, afin de générer une réponse.</li>
+  <li>Nous <strong>ne conservons pas</strong> le contenu de vos messages ni vos photos <strong>sur nos serveurs</strong> : ils y transitent le temps de générer la réponse. L'historique de conversation reste sur votre téléphone (§2).</li>
+  <li><strong>OpenAI</strong> peut conserver les contenus qu'il reçoit <strong>jusqu'à 30 jours</strong> pour la surveillance des abus, selon la politique applicable à son API, puis les supprime. OpenAI étant établi aux États-Unis, ces contenus peuvent être traités hors de l'Union européenne. Politique d'OpenAI : <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a></li>
+  <li>Pour appliquer la limite quotidienne, nos serveurs enregistrent, pour votre identifiant anonyme, la date du jour et le nombre de questions posées. Ces <strong>compteurs sont supprimés automatiquement après 2 jours</strong>.</li>
+  <li>En cas d'erreur ou de limite atteinte, nos serveurs inscrivent dans leurs <strong>journaux techniques</strong> (Google Cloud Logging) un événement comportant l'identifiant anonyme et un code d'erreur, <strong>sans le contenu de vos messages</strong>. Ces journaux sont conservés <strong>30 jours</strong>.</li>
+  <li>Le bouton <strong>« Signaler »</strong> sous une réponse prépare un e-mail dans votre messagerie, à notre adresse, avec le pays, la date et des extraits de la question et de la réponse. Rien n'est envoyé tant que vous ne l'envoyez pas vous-même.</li>
+  <li>Les réponses sont générées automatiquement et peuvent contenir des erreurs : en cas de doute, référez-vous au code de la route officiel de votre pays.</li>
+  <li>N'envoyez pas d'informations personnelles sensibles à l'assistant, ni de photo montrant des personnes ou des plaques d'immatriculation.</li>
 </ul>
 
-<h2>5. Achats intégrés (Premium)</h2>
-<p>L'Application propose un abonnement <strong>Premium</strong> (sans publicité). Les paiements sont traités <strong>directement par Google Play (Android) ou l'App Store (Apple)</strong>. Nous ne recevons ni ne stockons vos données bancaires. Le statut Premium est conservé <strong>localement</strong> sur votre appareil.</p>
-
-<h2>6. Services tiers utilisés</h2>
+<h2>6. Achats intégrés (Premium)</h2>
 <ul>
-  <li><strong>Google AdMob</strong> — affichage des publicités.</li>
-  <li><strong>Google Firebase</strong> (Authentication anonyme, Cloud Functions, Firestore) — fonctionnement de l'assistant IA et limitation d'usage. <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
+  <li>L'Application propose un abonnement <strong>Premium</strong> (sans publicité, assistant sans vidéo). Les paiements sont traités <strong>directement par Google Play (Android) ou l'App Store (Apple)</strong>. Nous ne recevons ni ne stockons vos données bancaires.</li>
+  <li>Sur <strong>Android</strong>, pour vérifier l'abonnement, l'Application transmet à nos serveurs le <strong>jeton d'achat</strong> fourni par Google Play ; nos serveurs interrogent <strong>Google Play</strong> (API Google Play Developer) pour connaître l'état de l'abonnement.</li>
+  <li>Nous conservons alors, rattachés à votre identifiant anonyme (§4) : l'<strong>identifiant du produit</strong> (offre 1, 3 ou 6 mois), la <strong>date d'échéance</strong>, l'<strong>état</strong> de l'abonnement et la date de la dernière vérification. Ni nom, ni adresse e-mail, ni donnée de paiement. Ces informations sont conservées tant qu'elles sont nécessaires à la vérification de l'abonnement ; vous pouvez en demander la suppression (§15).</li>
+  <li>Pour qu'un même abonnement ne serve pas à un nombre illimité d'installations, nous conservons aussi une <strong>empreinte non réversible</strong> du jeton d'achat (le jeton lui-même n'est pas conservé) et les identifiants anonymes des <strong>trois dernières installations</strong> qui l'ont fait vérifier. Ce rattachement est supprimé automatiquement <strong>un mois après l'échéance</strong>.</li>
+  <li>Sur <strong>iOS</strong>, l'abonnement est vérifié sur l'appareil, sans transmission à nos serveurs.</li>
+  <li>La date d'échéance est aussi enregistrée sur votre téléphone (§2).</li>
+</ul>
+
+<h2>7. Rapports de plantage (Firebase Crashlytics)</h2>
+<ul>
+  <li>Si l'Application plante, un <strong>rapport de plantage</strong> est envoyé à <strong>Firebase Crashlytics</strong> (Google). Il contient le <strong>modèle de l'appareil</strong>, la <strong>version du système</strong>, la version de l'Application, la <strong>trace technique</strong> de l'erreur et un <strong>identifiant d'installation</strong> propre à Crashlytics. Nous n'y ajoutons ni votre prénom, ni vos messages, ni vos photos.</li>
+  <li>Ces rapports servent uniquement à corriger les erreurs. Ils ne sont envoyés que par les versions publiées de l'Application.</li>
+  <li>Google traite ces données en tant que <strong>sous-traitant</strong>, pour notre compte. Les rapports sont conservés <strong>90 jours</strong>.</li>
+  <li>Confidentialité de Firebase : <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
+</ul>
+
+<h2>8. Services tiers utilisés</h2>
+<ul>
+  <li><strong>Google AdMob</strong> (et sa plateforme de consentement) — affichage des publicités.</li>
+  <li><strong>Google Firebase</strong> (Authentication anonyme, Cloud Functions, Firestore, App Check, Crashlytics) et <strong>Google Cloud Logging</strong> — fonctionnement de l'assistant IA, limitation d'usage, vérification d'abonnement, protection contre les abus, rapports de plantage. <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></li>
   <li><strong>OpenAI</strong> — génération des réponses de l'assistant IA.</li>
-  <li><strong>Google Play Billing / Apple App Store</strong> — gestion des achats intégrés.</li>
+  <li><strong>Google Play (Billing et API Google Play Developer) / Apple App Store</strong> — achats intégrés et vérification des abonnements.</li>
 </ul>
 
-<h2>7. Notifications</h2>
-<p>L'Application peut envoyer des <strong>notifications locales</strong> (rappels de révision). Elles sont générées <strong>sur votre appareil</strong> et ne transmettent aucune donnée à nos serveurs. Vous pouvez les désactiver dans les réglages de votre téléphone.</p>
+<h2>9. Notifications</h2>
+<p>L'Application peut envoyer des <strong>rappels de révision</strong>, <strong>uniquement si vous les acceptez</strong> : ils vous sont proposés à la fin de la configuration de l'Application, et un interrupteur du Profil permet de les activer ou de les couper à tout moment. Ce sont des <strong>notifications locales</strong>, générées sur votre appareil, à l'heure de votre téléphone ; elles ne transmettent aucune donnée à nos serveurs. Vous pouvez aussi les désactiver dans les réglages de votre téléphone.</p>
 
-<h2>8. Conservation des données</h2>
+<h2>10. Conservation des données</h2>
 <ul>
-  <li>Les données locales sont conservées tant que l'Application est installée ; vous les supprimez en la désinstallant.</li>
-  <li>Le compteur d'usage anonyme de l'assistant IA (Firestore) est réinitialisé quotidiennement.</li>
+  <li><strong>Données locales</strong> : tant que l'Application est installée ; vous les supprimez en la désinstallant ou en effaçant ses données. La conversation avec l'assistant s'efface à tout moment avec « Effacer la conversation ».</li>
+  <li><strong>Compteurs d'usage de l'assistant</strong> (Firestore) : supprimés automatiquement après 2 jours.</li>
+  <li><strong>Journaux techniques des serveurs</strong> : 30 jours.</li>
+  <li><strong>Rapports de plantage</strong> : 90 jours.</li>
+  <li><strong>Contenus transmis à OpenAI</strong> : jusqu'à 30 jours chez OpenAI.</li>
+  <li><strong>Statut d'abonnement vérifié</strong> : tant qu'il est nécessaire à la vérification de l'abonnement, ou jusqu'à votre demande de suppression.</li>
+  <li><strong>Rattachement d'un achat aux installations</strong> (empreinte du jeton, trois identifiants anonymes au plus) : supprimé automatiquement un mois après l'échéance de l'abonnement.</li>
+  <li><strong>E-mails de signalement ou de contact</strong> : le temps de traiter votre demande.</li>
 </ul>
 
-<h2>9. Enfants</h2>
+<h2>11. Enfants</h2>
 <p>L'Application s'adresse à des personnes en âge de préparer le permis de conduire. Elle n'est pas destinée aux enfants de moins de 13 ans et nous ne collectons pas sciemment de données les concernant.</p>
 
-<h2>10. Vos droits</h2>
-<p>Selon votre pays de résidence (notamment dans l'Union européenne — RGPD), vous pouvez disposer de droits d'accès, de rectification, d'effacement et d'opposition concernant vos données. Comme l'essentiel des données est stocké localement, vous exercez la plupart de ces droits directement depuis votre appareil (effacement des données / désinstallation). Pour toute demande, contactez-nous à l'adresse ci-dessous.</p>
+<h2>12. Vos droits</h2>
+<p>Selon votre pays de résidence (notamment dans l'Union européenne — RGPD), vous pouvez disposer de droits d'accès, de rectification, d'effacement et d'opposition concernant vos données. L'essentiel des données étant stocké localement, vous exercez la plupart de ces droits directement depuis votre appareil (effacement des données / désinstallation). Les données conservées sur nos serveurs (compteurs d'usage, statut d'abonnement, journaux techniques) sont rattachées à un identifiant anonyme : pour toute demande, contactez-nous à l'adresse ci-dessous, en indiquant si possible la date de votre achat ou de votre utilisation de l'assistant. Vous pouvez également introduire une réclamation auprès de l'autorité de protection des données de votre pays (en France, la CNIL).</p>
 
-<h2>11. Sécurité</h2>
-<p>Nous mettons en œuvre des mesures raisonnables pour protéger les données (par ex. vérification d'intégrité de l'application via App Check, communications chiffrées HTTPS). Aucune méthode de transmission n'est toutefois totalement sûre à 100 %.</p>
+<h2>13. Sécurité</h2>
+<p>Nous mettons en œuvre des mesures raisonnables pour protéger les données : vérification d'intégrité de l'application (App Check), communications chiffrées (HTTPS), base de données inaccessible depuis l'Application (seuls nos serveurs y accèdent), clé du fournisseur d'IA conservée côté serveur et jamais intégrée à l'Application. Aucune méthode de transmission n'est toutefois totalement sûre à 100 %.</p>
 
-<h2>12. Modifications</h2>
+<h2>14. Modifications</h2>
 <p>Cette politique peut être mise à jour. En cas de changement important, la date de « Dernière mise à jour » ci-dessus sera modifiée. Nous vous invitons à la consulter régulièrement.</p>
 
-<h2>13. Contact</h2>
+<h2>15. Contact</h2>
 <p>Pour toute question relative à cette politique de confidentialité :</p>
 <div class="box">
   <strong>Ismael Ouattara</strong><br>
