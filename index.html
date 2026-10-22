@@ -39,7 +39,7 @@
 
 <header>
   <h1>Politique de confidentialité</h1>
-  <p class="meta">Application <span class="app">Code de la Route</span> — dernière mise à jour : 10 septembre 2026</p>
+  <p class="meta">Application <span class="app">Code de la Route</span> — dernière mise à jour : 22 octobre 2026</p>
 </header>
 
 <p>La présente politique décrit comment l'application <strong>Code de la Route</strong> (« l'Application »), éditée par <strong>Ismael Ouattara</strong> (« nous »), traite les informations lorsque vous utilisez l'Application. En installant et en utilisant l'Application, vous acceptez les pratiques décrites ci-dessous.</p>
@@ -91,11 +91,11 @@
 <p>Si vous utilisez l'<strong>assistant IA</strong> (« Coach Route ») :</p>
 <ul>
   <li>Le <strong>texte de votre question</strong>, les derniers messages de la conversation (pour le contexte) et, si vous choisissez d'en envoyer une, la <strong>photo</strong> d'un panneau sont transmis à nos serveurs (<strong>Google Firebase / Cloud Functions</strong>, région Europe de l'Ouest) puis au fournisseur du modèle d'IA, <strong>OpenAI</strong>, afin de générer une réponse.</li>
-  <li>Nous <strong>ne conservons pas</strong> le contenu de vos messages ni vos photos <strong>sur nos serveurs</strong> : ils y transitent le temps de générer la réponse. L'historique de conversation reste sur votre téléphone (§2).</li>
+  <li>Nous <strong>ne conservons pas</strong> le contenu de vos messages ni vos photos <strong>sur nos serveurs</strong> : ils y transitent le temps de générer la réponse, sauf si vous signalez une réponse (voir plus bas). L'historique de conversation reste sur votre téléphone (§2).</li>
   <li><strong>OpenAI</strong> peut conserver les contenus qu'il reçoit <strong>jusqu'à 30 jours</strong> pour la surveillance des abus, selon la politique applicable à son API, puis les supprime. OpenAI étant établi aux États-Unis, ces contenus peuvent être traités hors de l'Union européenne. Politique d'OpenAI : <a href="https://openai.com/policies/privacy-policy">https://openai.com/policies/privacy-policy</a></li>
   <li>Pour appliquer la limite quotidienne, nos serveurs enregistrent, pour votre identifiant anonyme, la date du jour et le nombre de questions posées. Ces <strong>compteurs sont supprimés automatiquement après 2 jours</strong>.</li>
   <li>En cas d'erreur ou de limite atteinte, nos serveurs inscrivent dans leurs <strong>journaux techniques</strong> (Google Cloud Logging) un événement comportant l'identifiant anonyme et un code d'erreur, <strong>sans le contenu de vos messages</strong>. Ces journaux sont conservés <strong>30 jours</strong>.</li>
-  <li>Le bouton <strong>« Signaler »</strong> sous une réponse prépare un e-mail dans votre messagerie, à notre adresse, avec le pays, la date et des extraits de la question et de la réponse. Rien n'est envoyé tant que vous ne l'envoyez pas vous-même.</li>
+  <li>Le bouton <strong>« Signaler »</strong> sous une réponse ouvre une fenêtre dans l'Application. Si vous confirmez l'envoi, nos serveurs enregistrent le <strong>pays</strong>, la <strong>date</strong>, des <strong>extraits de la question et de la réponse</strong> (500 caractères au plus), <strong>votre commentaire</strong> s'il y en a un, et votre identifiant anonyme (§4), afin que nous vérifiions la réponse. Ni photo, ni prénom. Ces signalements sont <strong>supprimés automatiquement au bout d'un an</strong> ; le compteur qui limite leur nombre par jour, après 2 jours.</li>
   <li>Les réponses sont générées automatiquement et peuvent contenir des erreurs : en cas de doute, référez-vous au code de la route officiel de votre pays.</li>
   <li>N'envoyez pas d'informations personnelles sensibles à l'assistant, ni de photo montrant des personnes ou des plaques d'immatriculation.</li>
 </ul>
@@ -127,7 +127,7 @@
 </ul>
 
 <h2>9. Notifications</h2>
-<p>L'Application peut envoyer des <strong>rappels de révision</strong>, <strong>uniquement si vous les acceptez</strong> : ils vous sont proposés à la fin de la configuration de l'Application, et un interrupteur du Profil permet de les activer ou de les couper à tout moment. Ce sont des <strong>notifications locales</strong>, générées sur votre appareil, à l'heure de votre téléphone ; elles ne transmettent aucune donnée à nos serveurs. Vous pouvez aussi les désactiver dans les réglages de votre téléphone.</p>
+<p>L'Application envoie des <strong>rappels de révision</strong>, vers 9 h et 19 h à l'heure de votre téléphone. Au premier lancement, elle vous demande l'<strong>autorisation d'afficher des notifications</strong> ; sur Android 12 et les versions antérieures, le système ne pose pas cette question et les notifications sont autorisées par défaut. Ce sont des <strong>notifications locales</strong>, générées sur votre appareil ; elles ne transmettent aucune donnée à nos serveurs. Vous pouvez les couper à tout moment dans les <strong>réglages de votre téléphone</strong> (notifications de l'Application) : les rappels s'arrêtent alors, et reprennent si vous les autorisez de nouveau.</p>
 
 <h2>10. Conservation des données</h2>
 <ul>
@@ -138,7 +138,8 @@
   <li><strong>Contenus transmis à OpenAI</strong> : jusqu'à 30 jours chez OpenAI.</li>
   <li><strong>Statut d'abonnement vérifié</strong> : tant qu'il est nécessaire à la vérification de l'abonnement, ou jusqu'à votre demande de suppression.</li>
   <li><strong>Rattachement d'un achat aux installations</strong> (empreinte du jeton, trois identifiants anonymes au plus) : supprimé automatiquement un mois après l'échéance de l'abonnement.</li>
-  <li><strong>E-mails de signalement ou de contact</strong> : le temps de traiter votre demande.</li>
+  <li><strong>Signalements d'une réponse de l'assistant</strong> : un an, puis suppression automatique.</li>
+  <li><strong>E-mails de contact</strong> : le temps de traiter votre demande.</li>
 </ul>
 
 <h2>11. Enfants</h2>
